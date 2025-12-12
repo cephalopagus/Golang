@@ -5,11 +5,7 @@ import (
 )
 
 func main() {
+	const pi float64 = 3.1415
+	fmt.Println(pi)
 
-	var (
-		name   = "Дастан"
-		age    = 23
-		height = 180
-	)
-	fmt.Println("Имя:", name, "\nВозраст:", age, "\nРост:", height)
 }
