@@ -10,7 +10,7 @@ type User struct {
 
 func main() {
 
-	users := [3]User{
+	users := []User{
 		User{
 			Name:    "Dastan",
 			Rating:  5,
@@ -27,6 +27,8 @@ func main() {
 			Premium: false,
 		},
 	}
+
+	users = append(users, User{Name: "Adis", Rating: 4, Premium: true})
 	for i := range users {
 		if users[i].Premium {
 			users[i].Rating += 2.0
@@ -35,10 +37,10 @@ func main() {
 	for i := range users {
 		fmt.Println(users[i])
 	}
-	str := "dastan"
-	for v := range str {
-		fmt.Println(string(str[v]))
-	}
+	// str := "dastan"
+	// for v := range str {
+	// 	fmt.Println(string(str[v]))
+	// }
 }
 
 // arr := [5]int{1, 2, 3, 4, 5}
