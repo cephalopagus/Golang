@@ -10,33 +10,43 @@ type User struct {
 
 func main() {
 
-	users := []User{
-		User{
-			Name:    "Dastan",
-			Rating:  5,
-			Premium: true,
-		},
-		User{
-			Name:    "Atai",
-			Rating:  2,
-			Premium: false,
-		},
-		User{
-			Name:    "Isma",
-			Rating:  3,
-			Premium: false,
-		},
+	slice := make([]int, 2, 5) /*0-элементы слайса, 5-размер слайса*/
+	//slice = append(slice, 12, 34, 123, 12/2)
+
+	fmt.Println(cap(slice))
+	for _, v := range slice {
+		fmt.Println(v)
 	}
 
-	users = append(users, User{Name: "Adis", Rating: 4, Premium: true})
-	for i := range users {
-		if users[i].Premium {
-			users[i].Rating += 2.0
-		}
-	}
-	for i := range users {
-		fmt.Println(users[i])
-	}
+	// users := []User{
+	// 	User{
+	// 		Name:    "Dastan",
+	// 		Rating:  5,
+	// 		Premium: true,
+	// 	},
+	// 	User{
+	// 		Name:    "Atai",
+	// 		Rating:  2,
+	// 		Premium: false,
+	// 	},
+	// 	User{
+	// 		Name:    "Isma",
+	// 		Rating:  3,
+	// 		Premium: false,
+	// 	},
+	// }
+	// fmt.Println(len(users), cap(users))
+
+	// users = append(users, User{Name: "Adis", Rating: 4, Premium: true})
+	// for i := range users {
+	// 	if users[i].Premium {
+	// 		users[i].Rating += 2.0
+	// 	}
+	// }
+	// for i := range users {
+	// 	fmt.Println(users[i])
+	// }
+	// fmt.Println(len(users) + cap(users))
 	// str := "dastan"
 	// for v := range str {
 	// 	fmt.Println(string(str[v]))
